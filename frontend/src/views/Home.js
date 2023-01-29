@@ -19,7 +19,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    axios.get(`https://panicbin.wayneoco.net/api/bins`).then((response) => {
+    axios.get(`https://panicbin.mattdjohnston.ca/api/bins`).then((response) => {
       setBins(response.data);
     });
   }, [setBins]);
@@ -40,7 +40,7 @@ const Home = () => {
           sx={{ marginLeft: "auto", marginRight: "auto" }}
           onClick={async () => {
             const response = await axios.post(
-              `https://panicbin.wayneoco.net/api/bins`
+              `https://panicbin.mattdjohnston.ca/api/bins`
             );
             if (response.status === 201) {
               setOpen(true);
@@ -67,7 +67,7 @@ const Home = () => {
           {bins &&
             bins.length > 0 &&
             bins.map(({ uuid }) => {
-              const url = `https://panicbin.wayneoco.net/api/requests/${uuid}`;
+              const url = `https://panicbin.mattdjohnston.ca/api/requests/${uuid}`;
               return (
                 <ListItem key={uuid} component={Link} to={`/bins/${uuid}`}>
                   <ListItemText primary={url} />

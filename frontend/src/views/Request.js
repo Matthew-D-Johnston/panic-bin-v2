@@ -14,7 +14,7 @@ const Request = () => {
 
   useEffect(() => {
     axios
-      .get(`https://panicbin.wayneoco.net/api/requests/${requestId}`)
+      .get(`https://panicbin.mattdjohnston.ca/api/requests/${requestId}`)
       .then((response) => {
         setCreatedAt(response.data.createdat);
         setMethod(response.data.method);

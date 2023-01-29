@@ -9,7 +9,7 @@ const Bin = () => {
 
   useEffect(() => {
     axios
-      .get(`https://panicbin.wayneoco.net/api/requests/bin/${binId}`)
+      .get(`https://panicbin.mattdjohnston.ca/api/requests/bin/${binId}`)
       .then((response) => {
         setRequests(response.data);
       });
